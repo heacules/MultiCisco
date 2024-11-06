@@ -5,8 +5,9 @@ class my_device ():
 
     def __init__(self, filepath):
         with open(filepath, 'r') as file:
-            yaml_input = yaml.safe_load(file)
-            print(yaml_input)
+            self.yaml_input = yaml.safe_load(file)
+            #print(yaml_input)
+            #return yaml_input
 
 
 def main():
