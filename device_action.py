@@ -6,13 +6,14 @@ class my_device ():
     def __init__(self, filepath):
         with open(filepath, 'r') as file:
             self.yaml_device_list = yaml.safe_load(file)
-            connection = []
+            self.connection = []
             #print(yaml_input)
             #return yaml_input
 
     def ssh_conection(self):
-        for device in self.yaml_device_list[0]['device']:
-            pass
+        #missing to write this function
+        for N,device in self.yaml_device_list:
+            self.connection.append() = netmiko.ConnectHandler()
 
     def nice_print (self):
         return yaml.safe_dump(self.yaml_device_list)

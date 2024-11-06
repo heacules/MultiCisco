@@ -30,9 +30,7 @@ def main():
     if user_chois == 0:
         exit()
     elif user_chois == 1:
-        print(device_info.yaml_device_list[0])
-        #
-        # print(device_info.nice_print())
+        print(device_info.nice_print())
         main()
     elif user_chois == 1:
         pass
