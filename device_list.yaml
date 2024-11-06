@@ -1,8 +1,6 @@
-- device:
-    hostname : R1
-    ip: 10.0.0.0
-    netmask: 255.255.255.0
-- device:
-    hostname : R2
-    ip: 10.0.0.0
-    netmask: 255.255.255.0
+- hostname : R1
+  ip: 10.0.0.0
+  netmask: 255.255.255.0
+- hostname : R2
+  ip: 10.0.0.0
+  netmask: 255.255.255.0
