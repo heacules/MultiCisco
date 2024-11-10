@@ -2,9 +2,11 @@ import device_action
 
 
 main_menu = [
-    "quit",
-    "show all device",
-    "show all arp",
+    "Quit",
+    "Show all device info in yaml file",
+    "Enter credential for alle device",
+    "Open a SSH session to all device",
+    "Show all arp",
 ]
 
 def menu(menu_option):
@@ -21,19 +23,27 @@ def menu(menu_option):
         else:
             print("not a valid answer, try again \n \n")
 
-
 def main():
-    device_info = device_action.my_device('device_list.yaml')
-    #print(device_info.yaml_input)
+    #print(devices_ssh_1.yaml_input)
     user_chois = menu(main_menu)
     #print(type(user_chois))
     if user_chois == 0:
         exit()
     elif user_chois == 1:
-        print(device_info.nice_print())
+        print(devices_ssh_1.nice_print())
+        print(devices_ssh_1.username)
         main()
-    elif user_chois == 1:
-        pass
+    elif user_chois == 2:
+        devices_ssh_1.credtianls_information()
+        main()
+    elif user_chois == 3:
+        devices_ssh_1.ssh_conection()
+        #print(devices_ssh_1.connection)
+        main()
+    elif user_chois == 4:
+        devices_ssh_1.print_arp()
+        main()
     print(user_chois)
 if __name__ == "__main__":
+    devices_ssh_1 = device_action.my_device('device_list.yaml')
     main()
